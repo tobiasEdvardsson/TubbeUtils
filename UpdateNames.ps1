@@ -46,3 +46,4 @@ function Main()
     Write-Host "Done, Thank you" -ForegroundColor green
 }
 Main
+Pause
