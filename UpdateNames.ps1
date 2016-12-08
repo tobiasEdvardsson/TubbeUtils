@@ -2,7 +2,7 @@
 	1. Take copy of project and dump this script in that folder.
 	2. Change the newName parameter to the new NEWPROJECTNAME
 	3. Change the currentName to the old OLDPROJECTNAME
-	4. Open CMD and CD to to the project folder eg: C:\GitHub\NEWPROJECTNAME
+	4. Open CMD and CD to to the project folder eg: C:\GitHub\OLDPROJECTNAME
 	5. Run this script with the following command powershell -file .\UpdateNames.ps1
 #>
 
@@ -22,6 +22,7 @@ function Main()
     $files += get-childitem . *.json -rec
     $files += get-childitem . *.asax.cs -rec
     $files += get-childitem . *.asax -rec
+    $files += get-childitem . *.txt -rec
 
     foreach ($file in $files)
     {
