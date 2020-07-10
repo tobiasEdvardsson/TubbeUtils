@@ -1,4 +1,4 @@
-﻿<# 
+<# 
 	1. Take copy of project and dump this script in that folder.
 	2. Change the newName parameter to the new NEWPROJECTNAME
 	3. Change the currentName to the old OLDPROJECTNAME
@@ -6,8 +6,8 @@
 	5. Run this script with the following command powershell -file .\UpdateNames.ps1
 #>
 
-$newName = "NEWPROJECTNAME" 
-$currentName = "OLDPROJECTNAME"
+$newName = "Kvick" 
+$currentName = "RhCommon"
 
 function Main()
 {
@@ -23,6 +23,9 @@ function Main()
     $files += get-childitem . *.asax.cs -rec
     $files += get-childitem . *.asax -rec
     $files += get-childitem . *.txt -rec
+    $files += get-childitem . *.nuspec -rec
+    $files += get-childitem . *.xdt -rec
+    $files += get-childitem . *.bat -rec
 
     foreach ($file in $files)
     {
